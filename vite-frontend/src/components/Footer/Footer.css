@@ -1,0 +1,78 @@
+.footer {
+    background-color: #ffefd5; /* Light orange background */
+    padding: 40px 0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    width: 98%; /* Footer respects the 90% width of the app */
+    margin: 0 auto; /* Center the footer within the page */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+  }
+  
+  .footer-section h2 {
+    color: #ff8c42; /* Darker orange for titles */
+    margin-bottom: 20px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff8c42; /* Darker orange on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin: 20px 0;
+      width: 100%; /* Ensure sections take full width on smaller screens */
+    }
+  }
+  

@@ -1,0 +1,21 @@
+.header {
+  height: 50vh; /* Adjusted height to a more appropriate viewport height */
+  margin: 0; /* Removed margin to eliminate extra space around the header */
+  padding: 0; /* Removed padding if any to ensure no extra space */
+  background: url('/banner_image.jpg') no-repeat center center; /* Centered background image */
+  background-size: cover; /* Ensures the image covers the entire area without gaps */
+  position: relative;
+}
+
+.header button { /* Fixed the selector */
+  position: absolute;
+  border: none;
+  color: #747474;
+  font-weight: 500;
+  background-color: white;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  /* Additional styling for the button if needed */
+}
+
+
