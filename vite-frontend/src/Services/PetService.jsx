@@ -11,6 +11,10 @@ class PetService {
         return await axios.get(baseUrl+"/petimages/"+petId)
     }
     
+    async getPetById(petId){
+        // return await axios.get(baseUrl+"/"+petId)
+      return await axios.get(baseUrl+`/${petId}`)
+    }
     
 }
 

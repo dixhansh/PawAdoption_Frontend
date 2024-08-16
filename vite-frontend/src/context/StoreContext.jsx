@@ -8,7 +8,7 @@ const StoreContextProvider = (props) => {
 
 //if we add any element in the following object we will be able to access that element in any component
     const contextValue = {
-
+            
     }
 
     return (

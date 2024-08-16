@@ -1,0 +1,163 @@
+/* Set background image for the registration page */
+.registration-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('/public/banner_image.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Apply blur to the background */
+.registration-page-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(7px); /* Blur effect applied to the background */
+  z-index: 1;
+}
+
+/* Registration form container styling */
+.registration-form-container {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+.registration-form-container h2 {
+  color: #FF5722;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Subheadings */
+.registration-form-container h3 {
+  color: #FF5722;
+  margin-bottom: 1rem;
+}
+
+/* Input group styling */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group input:focus, .input-group select:focus {
+  border-color: #FF5722;
+  outline: none;
+}
+
+/* Submit button styling */
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #FF5722;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #E64A19;
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets (widths between 768px and 1024px) */
+@media (max-width: 1024px) {
+  .registration-form-container {
+      max-width: 90%;
+      padding: 1.5rem;
+  }
+
+  .registration-form-container h2 {
+      font-size: 1.8rem;
+  }
+
+  .input-group input, .input-group select {
+      padding: 0.65rem;
+  }
+
+  .submit-btn {
+      padding: 0.65rem;
+      font-size: 1rem;
+  }
+}
+
+/* For mobile devices (widths up to 768px) */
+@media (max-width: 768px) {
+  .registration-form-container {
+      max-width: 95%;
+      padding: 1rem;
+  }
+
+  .registration-form-container h2 {
+      font-size: 1.6rem;
+  }
+
+  .input-group input, .input-group select {
+      padding: 0.6rem;
+  }
+
+  .submit-btn {
+      padding: 0.6rem;
+      font-size: 0.95rem;
+  }
+}
+
+/* For smaller mobile devices (widths up to 480px) */
+@media (max-width: 480px) {
+  .registration-form-container {
+      max-width: 100%;
+      padding: 0.8rem;
+      margin: 0 1rem;
+  }
+
+  .registration-form-container h2 {
+      font-size: 1.4rem;
+  }
+
+  .input-group input, .input-group select {
+      padding: 0.55rem;
+  }
+
+  .submit-btn {
+      padding: 0.55rem;
+      font-size: 0.9rem;
+  }
+}

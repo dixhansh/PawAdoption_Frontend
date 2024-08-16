@@ -1,25 +1,39 @@
-.navbar{
-    padding: 20px 0px;
+.navbar {
+    padding: 20px 30px; /* Increased horizontal padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(236, 236, 236); /* Light background for a clean look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    border-bottom: 1px solid #e0e0e0; /* Light border for separation */
 }
-.navbar .logo{
+
+/* Logo */
+.navbar .logo {
     width: 80px;
+    transition: width 0.3s ease-in-out; /* Smooth resizing */
+    cursor: pointer;
 }
-.navbar-menu{
+
+/* Navbar Menu */
+.navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
     color: #49557e;
     font-size: 18px;
+    margin: 0; /* Remove default margin */
 }
-.navbar-right{
+
+/* Navbar Right Section */
+.navbar-right {
     display: flex;
     align-items: center;
-    gap: 40px
+    gap: 40px;
 }
-.navbar button{
+
+/* Navbar Buttons */
+.navbar button {
     background: transparent;
     font-size: 16px;
     color: #49557e;
@@ -27,72 +41,94 @@
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3;
-}
-.navbar button:hover{
-    background-color: orange;
-}
-.navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
-}
-.navbar li{
-    cursor: pointer;
-}
-.navbar-search-icon{
-    position: relative;
-}
-.navbar-search-icon .dot{
-    position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: orange;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-@media (max-width:1050px){
-    .navbar .logo{
+/* Button Hover State */
+.navbar button:hover {
+    background-color: orange;
+    color: #fff; /* Change text color on hover */
+    border-color: orange; /* Match border color with background */
+}
+
+/* Active Link */
+.navbar .active {
+    padding-bottom: 5px; /* Increased padding for better visual */
+    border-bottom: 3px solid #49557e; /* Thicker border for emphasis */
+    color: #49557e; /* Active link color */
+}
+
+/* List Items */
+.navbar li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Search Icon */
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+}
+
+/* Media Queries */
+@media (max-width: 1050px) {
+    .navbar .logo {
         width: 140px;
     }
-    .navbar-menu{
-        gap:20px;
-        font-size:17px;
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
     }
-    .navbar-right{
-        gap:30px;
+
+    .navbar-right {
+        gap: 30px;
     }
-    .navbar-right img{
-        width: 22px;
+
+    .navbar-right img {
+        width: 24px; /* Adjusted image size */
     }
-    .navbar-right button{
+
+    .navbar-right button {
         padding: 8px 25px;
     }
 }
 
-@media (max-width:900px){
-    .navbar .logo{
+@media (max-width: 900px) {
+    .navbar .logo {
         width: 120px;
     }
-    .navbar-menu{
-        gap:15px;
-        font-size:16px;
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
     }
-    .navbar-right{
-        gap:20px;
+
+    .navbar-right {
+        gap: 20px;
     }
-    .navbar-right img{
-        width: 20px;
+
+    .navbar-right img {
+        width: 22px; /* Adjusted image size */
     }
-    .navbar-right button{
+
+    .navbar-right button {
         padding: 7px 20px;
         font-size: 15px;
     }
 }
 
-@media (max-width:750px){
-    .navbar-menu{
-        display: none;
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none; /* Hide menu on small screens */
     }
 }

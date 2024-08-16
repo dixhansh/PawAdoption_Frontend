@@ -23,9 +23,12 @@ const DisplayPets = () => {
             const petImages = await PetService.getPetImagesById(pet.id);
             imagesData[pet.id] = petImages.data[0]?.filePath || ''; //storing key value pair (petId,PetImageUrl) in the state, 1st image is the profile pic 
         }
-        console.log(imagesData);
         setPetImages(imagesData); // Store all the images in state
     };
+
+    const showPetDetails = (petId) => {
+        navigate(`/petdetails/${petId}`)
+    }
 
     return (
         <div className='display-pets' id='display-pets'>
@@ -38,6 +41,7 @@ const DisplayPets = () => {
                             <img 
                                 src={petImages[pet.id] || '/public/pet_placeholder_image.png'} // Use the image URL or a placeholder
                                 alt={pet.name} 
+                                onClick={()=>{showPetDetails(pet.id)}}
                             />
                             <p>{pet.name}</p>
                         </div>

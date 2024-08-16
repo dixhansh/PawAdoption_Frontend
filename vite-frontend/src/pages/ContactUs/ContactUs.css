@@ -1,0 +1,98 @@
+/* Container for the entire Contact Us page */
+.contact-us-container {
+    max-width: 800px;
+    margin: 40px auto; /* Margin around the container for spacing from other elements */
+    padding: 40px; /* Padding inside the container */
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for elevation */
+}
+
+/* Heading */
+.contact-us-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00274d; /* Dark blue for headings */
+    text-align: center;
+}
+
+/* Description paragraph */
+.contact-us-container p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #666; /* Medium gray for text */
+}
+
+/* Form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form elements */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels inside form groups */
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #00274d; /* Dark blue for labels */
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Padding inside input fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Textarea-specific styling */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit button styling */
+.submit-button {
+    background-color: #00274d; /* Dark blue for button background */
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Space above the button */
+}
+
+/* Button hover state */
+.submit-button:hover {
+    background-color: #001f3f; /* Darker blue for hover effect */
+}
+
+/* Button active state */
+.submit-button:active {
+    background-color: #001a33; /* Even darker blue for active state */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-us-container {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    .contact-us-container h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        gap: 15px; /* Reduced gap between form elements */
+    }
+}
