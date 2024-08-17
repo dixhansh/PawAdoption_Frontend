@@ -8,12 +8,13 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import PetDetails from './pages/PetDetails/PetDetails';
 import ContactUs from './pages/ContactUs/ContactUs';
+import AdminDash from './pages/AdminDash/AdminDash';
 
 function App() {
   const location = useLocation(); // Get the current path
   
   // Define paths where Navbar and Footer should be hidden
-  const hideNavbarFooterPaths = ['/','/registration'];
+  const hideNavbarFooterPaths = ['/','/login','/registration','/admindash'];
 
   return (
     <>
@@ -21,11 +22,13 @@ function App() {
         {!hideNavbarFooterPaths.includes(location.pathname) && <Navbar />}
         <Routes>
           <Route path="/" element={<LoginPage/>} />
+          <Route path="/login" element={<LoginPage/>} />
           <Route path='/registration' element={<RegistrationPage/>} />
           <Route path="/applicationform" element={<ApplicationForm />} />
           <Route path='/home' element={<Home />} />
           <Route path='/petdetails/:petId' element={<PetDetails/>} />
           <Route path='/contactus' element={<ContactUs/>} />
+          <Route path='admindash' element={<AdminDash/>} />
         </Routes>
       </div>
       {!hideNavbarFooterPaths.includes(location.pathname) && <Footer />}

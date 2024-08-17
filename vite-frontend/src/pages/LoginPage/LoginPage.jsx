@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
+import AuthService from '../../Services/AuthService';
+import UserService from '../../Services/UserService';
 const LoginPage = () => {
 
     const [loginFormDetails, setLoginFormDetails] = useState({ email:"", password:"" });
@@ -17,8 +19,31 @@ const LoginPage = () => {
     };
 
 
-    const handleLogin = () => {
-        navigate("/home");
+    const handleLogin = async (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
+       try{ 
+        var results = await AuthService.validateUser(loginFormDetails);
+        const { role } = results; 
+
+        //fetching all user details from the backend and storing in the context api
+        var userResponse = await UserService.getUserById(results.id);
+        var user = userResponse.data; //here user is a JS object
+
+        //saving validated user details in the local storage as a JSON string
+        localStorage.setItem('user', JSON.stringify(user)); 
+        
+        //navigating the user based on the role
+        if(role.includes("Admin")){
+            navigate("/admindash")
+        }
+        else{
+            navigate("/home")
+        }
+
+        } catch(error){
+            alert("Login Credentials are invalid");
+            navigate("/login");
+        }
     };
 
 
