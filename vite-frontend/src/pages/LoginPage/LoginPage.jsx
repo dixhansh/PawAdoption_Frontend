@@ -25,7 +25,7 @@ const LoginPage = () => {
         var results = await AuthService.validateUser(loginFormDetails);
         const { role } = results; 
 
-        //fetching all user details from the backend and storing in the context api
+        //fetching all user details from the backend and storing in the localStorage
         var userResponse = await UserService.getUserById(results.id);
         var user = userResponse.data; //here user is a JS object
 

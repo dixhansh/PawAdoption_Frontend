@@ -19,6 +19,10 @@ const Navbar = () => {
         }
     }
 
+    const handleProfile = () => {
+        
+    }
+
   return (
     <div className='navbar'>
         <img src={assets.site_logo} alt="" className="logo" onClick={()=>navigate("/home")}/>
@@ -32,7 +36,7 @@ const Navbar = () => {
                 <img src={assets.basket_icon} alt="" />
                 <div className="dot"></div>
             </div>
-            <button>Profile</button>
+            <button type='button' name='profile'  id='profile' onClick={hadleProfile}>Profile</button>
         </div>
     </div>
   )
